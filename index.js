@@ -1,0 +1,18 @@
+const express = require('express');
+const mongoose = require('mongoose');
+require('dotenv').config();
+
+const app = express();
+app.use(express.json());
+
+mongoose.connect(process.env.MONDB)
+    .then(() => {
+        console.log('MongoDB Connected');
+    })
+    .catch((err) => {
+        console.log('Error connecting to MongoDB:', err);
+    });
+app.get('/', (req, res) => res.send('Hello World!!'));
+app.listen(3000, () => {
+    console.log(`Server running at http://localhost:3000/`);
+});
