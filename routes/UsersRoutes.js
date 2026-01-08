@@ -7,9 +7,9 @@ router.post('/', async (req, res) => {
     try {
         const { name, password } = req.body
         if (!name || !password) {
-            return res.status(409).json9{
-                message: 'Name and password is required '
-            }
+            return res.status(400).json({
+                message: 'Name and password is require'
+            })
 
         }
         const existingUser = await userModel.findOne({ name })
@@ -47,3 +47,5 @@ router.get('/', async (req, res) => {
         res.status(500).json({ error: err.message });
     }
 })
+
+module.exports = router;
