@@ -16,4 +16,4 @@ mongoose.connect(process.env.MONDB)
 app.use('/api/users', require('./routes/UsersRoutes'))
 app.listen(3000, () => {
     console.log(`Server running at http://localhost:3000/`);
-});
+})
