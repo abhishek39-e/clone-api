@@ -13,7 +13,7 @@ mongoose.connect(process.env.MONDB)
     .catch((err) => {
         console.log('Error connecting to MongoDB:', err);
     });
-// app.get('/', (req, res) => res.send('Hello World!'));
+// app.get('/', (req, res) => res.send('Hello World!'))
 app.use('/api/users', require('./routes/UsersRoutes'))
 app.listen(3000, () => {
     console.log(`Server running at http://localhost:3000/`);
