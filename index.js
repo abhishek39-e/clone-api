@@ -8,7 +8,7 @@ app.use(express.urlencoded({ extended: true }));
 //hell
 mongoose.connect(process.env.MONDB)
     .then(() => {
-        console.log('MongoDB Connected');;;
+        console.log('MongoDB Connected');
     })
     .catch((err) => {
         console.log('Error connecting to MongoDB:', err);
