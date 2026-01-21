@@ -15,7 +15,7 @@ router.post('/add', async (req, res) => {
 
         if (!name || !password) {
             return res.status(400).json({
-                message: 'Name and password are required'
+                message: 'Name and password are required...'
             });
         }
 
