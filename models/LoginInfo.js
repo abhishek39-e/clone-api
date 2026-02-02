@@ -7,4 +7,4 @@ const loginInfo = new mongoose.Schema({
     dob: Number,
     username: String
 })
-module.exports = mongoose.model('LoginInfo', loginInfo)
+module.exports = mongoose.model('LoginInfo', loginInfo);;;
